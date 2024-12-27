@@ -9,4 +9,4 @@ My final vanilla JavaScript project before heading into React! Build a quiz usin
 
 # 🛠️ Areas for Improvement:
 - Desktop UI: I focused mostly on building the site for mobile.
-- Naming functions: I feel like I could do much better with naming.
+- Naming functions: I feel like I could do much better with naming. I do need some help with this!?
