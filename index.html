@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We have the best quizes for everyone that loves a challenge!">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <title>QUIZMASTERS - For everyone that loves a challenge</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+
+        <header class="mainHeader">
+            <h2>QUIZMASTERS</h2>
+        </header>
+
+        <!-- Quiz homepage -->
+        <div class="quiz-wrapper">
+
+            <h1>Top quiz categories</h1>
+
+            <br>
+
+            <div class="quizes">
+                <button id="startQuiz" data-categoryid="27" value="animals">
+                    <img src="./assets/animals.webp" alt="Animals quiz">
+                    <h2>Animals</h2>
+                </button>
+
+                <button id="startQuiz" data-categoryid="21" value="sports">
+                    <img src="./assets/sports.jpg" alt="Sports quiz">
+                    <h2>Sports</h2>
+                </button>
+
+                <button id="startQuiz" data-categoryid="20" value="mythology">
+                    <img src="./assets/mythologie.jpg" alt="Mythology quiz">
+                    <h2>Mythology</h2>
+                </button>
+
+                <button id="startQuiz" data-categoryid="9" value="general knowledge">
+                    <img src="./assets/general.jpg" alt="General Knowledge quiz">
+                    <h2>General Knowledge</h2>
+                </button>
+            </div>
+
+
+        </div>
+
+        <!-- Quiz popup -->
+        <div id="quizPopup" class="display-none">
+        </div>
+
+        <!-- Result popup -->
+        <div id="quizResults" class="display-none">
+            <h3>Quiz Results</h2>
+
+                <div class="innerResults">
+                    <img id="resultImage" src="./assets/Cup.svg" alt="Winner winner chicken dinner">
+                    <h2 id="resultTitle">Congratulations!</h2>
+                    <p id="resultDescription">Nicely done! You are in the top 10 of players.</p>
+                </div>
+
+                <div class="score">
+                    <h3>Your score</h3>
+                    <div class="scoreResults">
+                        <p id="amountCorrect">20</p>
+                        <p>/</p>
+                        <p id="totalQuestions">20</p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button id="viewAnswers">View answers</button>
+                    <button id="takeNewQuiz">Take new quiz</button>
+                </div>
+
+                <button id="backToHome"></button>
+
+                <template id="quizQuestions">
+                    <header>
+                        <p id="subTitle"></p>
+                        <h2>Question <span id="questionsDone">06</span><span id="questionsLeft">/10</span></h2>
+                        <div class="lines"></div>
+                    </header>
+
+                    <div id="innerQuiz">
+                        <p id="question">What scientific family does the Aardwolf belong to?</p>
+
+                        <div id="questionButtons"></div>
+                    </div>
+
+                    <footer>
+                        <div id="quitQuiz"><span class="closeIcon">
+                                <div class="iconInner"></div>
+                            </span>Quit quiz</div>
+
+                        <button id="nextQuiz">Next</button>
+                    </footer>
+                </template>
+
+
+        </div>
+
+        <!-- Result anwsers popup -->
+        <div id="quizResultAnwsers" class="display-none">
+            <h3>Quiz Results:</h2>
+
+                <div id="quizResultAnwsersTable"></div>
+
+                <template id="quizResultAnwsersTemplate">
+                    <div id="quizQuestionAnwserRow">
+                        <h2 id="resultDescriptionRow">1. Unlike on most salamanders, this part of a newt is flat?</h2>
+                        <p id="resultYourAnswerRow">Your Answer:</p>
+                        <p id="resultCorrectAnswerRow">Correct Answer:</p>
+                        <p id="resultScoreRow">Score:</p>
+                    </div>
+                </template>
+
+
+                <div>
+                    <button id="resultsBackToHome"></button>
+                </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="./src/quiz.js"></script>
+
+</body>
+
+</html>

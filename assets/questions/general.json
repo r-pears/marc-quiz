@@ -1,0 +1,122 @@
+[
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Which one of these Swedish companies was founded in 1943?",
+        "correct_answer": "IKEA",
+        "incorrect_answers": [
+            "H &amp; M",
+            "Lindex",
+            "Clas Ohlson"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?",
+        "correct_answer": "Ed Sheeran - I See Fire",
+        "incorrect_answers": [
+            "Marvin Gaye - Sexual Healing",
+            "Coldplay - Midnight",
+            "a-ha - Take On Me"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Which of the following languages does NOT use gender as a part of its grammar?",
+        "correct_answer": "Turkish",
+        "incorrect_answers": [
+            "German",
+            "Danish",
+            "Polish"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "In the MMO RPG &quot;Realm of the Mad God&quot;, what dungeon is widely considered to be the most difficult?",
+        "correct_answer": "The Shatter&#039;s",
+        "incorrect_answers": [
+            "Snake Pit",
+            "The Tomb of the Acient&#039;s",
+            "The Puppet Master&#039;s Theater"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Which musician has collaborated with American producer Porter Robinson and released the 2016 song &quot;Shelter&quot;?",
+        "correct_answer": "Madeon",
+        "incorrect_answers": [
+            "Mat Zo",
+            "deadmau5",
+            "Zedd"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Which church&#039;s interior in Vatican City was designed in 1503 by renaissance architects including Bramante, Michelangelo and Bernini?",
+        "correct_answer": "St. Peter&#039;s Basilica",
+        "incorrect_answers": [
+            "Catania Cathedral",
+            "St. Mark&rsquo;s Basilica",
+            "The Duomo of Florence"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "What year was Queen Elizabeth II born?",
+        "correct_answer": "1926",
+        "incorrect_answers": [
+            "1923",
+            "1929",
+            "1930"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "What is the most commonly used noun in the English language?",
+        "correct_answer": "Time",
+        "incorrect_answers": [
+            "Home",
+            "Water",
+            "Man"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Which of these cities does NOT have a United States Minting location?",
+        "correct_answer": "St. Louis, MO",
+        "incorrect_answers": [
+            "San Fransisco, CA",
+            "Philidelphia, PA",
+            "West Point, NY"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "Disney&#039;s Haunted Mansion is home to a trio of Hitchhiking Ghosts. Which of these is NOT one of them?",
+        "correct_answer": "Harry",
+        "incorrect_answers": [
+            "Gus",
+            "Phineas",
+            "Ezra"
+        ]
+    }
+]
