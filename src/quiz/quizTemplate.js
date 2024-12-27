@@ -1,5 +1,6 @@
 import quizButtons from "./quizButtons.js";
 import quizHeader from "./quizHeader.js";
+import quizLinesCreator from "./quizLines/quizLinesCreator.js";
 import { quizNextSlide } from "./quizNextSlide.js";
 import quizQuitButton from "./quizQuitButton.js";
 
@@ -19,6 +20,7 @@ export default function quizTemplate() {
                     quizPopupSelector.appendChild(clone);
 
                     quizQuitButton();
+                    quizLinesCreator(questions);
                     showQuestion(questions, currentQuestion);
                     quizNextSlide(questions, currentQuestion);
                 }

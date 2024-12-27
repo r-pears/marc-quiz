@@ -1,4 +1,4 @@
-export default function resultAnswersValidationResultsColors() {
+export default function resultAnswersValidationResultsColors(totalPoints) {
     const amountCorrectElement = document.getElementById('amountCorrect');
     const resultDescription = document.getElementById('resultDescription');
     const resultTitle = document.getElementById('resultTitle');

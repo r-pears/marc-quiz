@@ -1,6 +1,7 @@
 import resultsBase from "../results/resultsBase.js";
 import { resetSelectedQuestions } from "./quizQuestionButtonSelector.js";
 import { showQuestion } from "./quizTemplate.js";
+import quizLinesColor from "./quizLines/quizLinesColor.js";
 
 
 export function quizNextSlide(questions, currentQuestion) {
@@ -28,6 +29,8 @@ export function quizNextSlide(questions, currentQuestion) {
 
             nextQuizSelector.disabled = true;
             nextQuizSelector.classList.remove("active");
+
+            quizLinesColor(currentQuestionIndex);
         } else {
             resultsBase(currentQuestion);
         }

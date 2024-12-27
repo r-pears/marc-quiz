@@ -24,7 +24,7 @@ export default function resultsAnswersValidation(currentQuestion) {
         }
     });
     
-    resultAnswersValidationResultsColors();
+    resultAnswersValidationResultsColors(totalPoints);
 
     resultAnswersPage(correctAnswers, allUserAnswers);
 }
