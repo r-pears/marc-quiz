@@ -9,5 +9,7 @@ export default function resultBackToHome() {
         resultAnwsersSelector.classList.add("display-none");
         quizResultsSelector.classList.add("display-none");
         quizPopupSelector.classList.add("display-none");
+
+        localStorage.clear();
     });
 }
