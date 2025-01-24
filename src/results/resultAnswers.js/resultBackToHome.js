@@ -10,6 +10,9 @@ export default function resultBackToHome() {
         quizResultsSelector.classList.add("display-none");
         quizPopupSelector.classList.add("display-none");
 
+        const removeQuizWrapper = document.querySelector(".quiz-wrapper");
+        removeQuizWrapper.classList.remove("display-none");
+
         localStorage.clear();
     });
 }

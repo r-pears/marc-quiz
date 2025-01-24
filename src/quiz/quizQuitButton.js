@@ -8,6 +8,9 @@ export default function quizQuitButton() {
         quizSelector.classList.add("display-none");
         quizSelector.innerHTML = "";
 
+        const removeQuizWrapper = document.querySelector(".quiz-wrapper");
+        removeQuizWrapper.classList.remove("display-none");
+
         localStorage.clear();
     });
 }
