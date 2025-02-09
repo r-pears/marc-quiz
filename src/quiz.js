@@ -4,3 +4,5 @@ import { quizSelector } from "./quiz/quizSelector.js";
 localStorage.clear();
 
 quizSelector();
+
+// The game Quiz is very buggy. Please fix.
