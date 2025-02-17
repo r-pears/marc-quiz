@@ -13,6 +13,8 @@ export default function resultBackToHome() {
         const removeQuizWrapper = document.querySelector(".quiz-wrapper");
         removeQuizWrapper.classList.remove("display-none");
 
+        quizPopupSelector.innerHTML = "";
+
         localStorage.clear();
     });
 }

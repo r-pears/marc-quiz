@@ -2,7 +2,7 @@ export function updateNextButtonState(questionIndex) {
     const nextQuizSelector = document.querySelector("#nextQuiz");
     const answers = JSON.parse(localStorage.getItem(`Answers${questionIndex}`) || "[]");
     
-    if (answers.length > 0) {
+    if (answers) {
         nextQuizSelector.disabled = false;
         nextQuizSelector.classList.add("active");
     } else {

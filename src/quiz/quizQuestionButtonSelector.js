@@ -1,30 +1,31 @@
 import { updateNextButtonState } from "./quizNextButton.js";
 
 export function resetSelectedQuestions() {
-    selectedQuestions = [];
+    selectedQuestion = null;
 }
 
-let selectedQuestions = [];
+let selectedQuestion = null;
 
 export default function quizButtonValidation(button, questionIndex) {
-
-    if (button.classList.contains("selected-button")) {
-        button.classList.remove("selected-button");
-        selectedQuestions = selectedQuestions.filter(item => item !== button.value);
-
-        localStorage.setItem(`Answers${questionIndex}`, JSON.stringify(selectedQuestions));
-
-        updateNextButtonState(questionIndex);
-
-    } else {
-        button.classList.add("selected-button");
-        selectedQuestions.push(button.value);
-
-        localStorage.setItem(`Answers${questionIndex}`, JSON.stringify(selectedQuestions));
-
-        updateNextButtonState(questionIndex);
-
+    // Deselect previously selected button if it exists
+    const previouslySelectedButton = document.querySelector('.selected-button');
+    if (previouslySelectedButton) {
+        previouslySelectedButton.classList.remove('selected-button');
     }
 
-    return selectedQuestions;
+    // If clicking the same button, deselect it
+    if (selectedQuestion === button.value) {
+        selectedQuestion = null;
+        localStorage.setItem(`Answers${questionIndex}`, JSON.stringify(selectedQuestion));
+        updateNextButtonState(questionIndex);
+        return selectedQuestion;
+    }
+
+    // Select new button
+    button.classList.add('selected-button');
+    selectedQuestion = button.value;
+    localStorage.setItem(`Answers${questionIndex}`, JSON.stringify(selectedQuestion));
+    updateNextButtonState(questionIndex);
+
+    return selectedQuestion;
 }

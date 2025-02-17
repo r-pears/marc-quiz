@@ -8,6 +8,7 @@ export default function resultsBackToHome() {
     takeNewQuizSelector.addEventListener("click", () => {
         resultPopopSelector.classList.add("display-none");
         quizPopupSelector.classList.add("display-none");
+        quizPopupSelector.innerHTML = "";
 
         removeQuizWrapper.classList.remove("display-none");
         localStorage.clear();
@@ -16,8 +17,10 @@ export default function resultsBackToHome() {
     backToHomeButtonSelector.addEventListener("click", () => {
         resultPopopSelector.classList.add("display-none");
         quizPopupSelector.classList.add("display-none");
-
         removeQuizWrapper.classList.remove("display-none");
+
+        quizPopupSelector.innerHTML = "";
+
         localStorage.clear();
     });
 }

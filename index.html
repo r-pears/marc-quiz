@@ -57,11 +57,6 @@
                     <h2>Music</h2>
                 </button>
 
-                <button id="startQuiz" data-categoryid="13" value="theatres">
-                    <span class="icon">🎭</span>
-                    <h2>Theatres</h2>
-                </button>
-
                 <button id="startQuiz" data-categoryid="14" value="television">
                     <span class="icon">📺</span>
                     <h2>Television</h2>
@@ -117,16 +112,6 @@
                     <h2>Politics</h2>
                 </button>
 
-                <button id="startQuiz" data-categoryid="25" value="art">
-                    <span class="icon">🎨</span>
-                    <h2>Art</h2>
-                </button>
-
-                <button id="startQuiz" data-categoryid="26" value="celebrities">
-                    <span class="icon">🌟</span>
-                    <h2>Celebrities</h2>
-                </button>
-
                 <button id="startQuiz" data-categoryid="27" value="animals">
                     <span class="icon">🐾</span>
                     <h2>Animals</h2>
@@ -140,11 +125,6 @@
                 <button id="startQuiz" data-categoryid="29" value="comics">
                     <span class="icon">🦸</span>
                     <h2>Comics</h2>
-                </button>
-
-                <button id="startQuiz" data-categoryid="30" value="gadgets">
-                    <span class="icon">📱</span>
-                    <h2>Gadgets</h2>
                 </button>
 
                 <button id="startQuiz" data-categoryid="31" value="anime & manga">
@@ -165,6 +145,28 @@
         <div id="quizPopup" class="display-none">
         </div>
 
+        <template id="quizQuestions">
+            <header>
+                <p id="subTitle"></p>
+                <h2>Question <span id="questionsDone">06</span><span id="questionsLeft">/10</span></h2>
+                <div class="lines"></div>
+            </header>
+
+            <div id="innerQuiz">
+                <p id="question">What scientific family does the Aardwolf belong to?</p>
+
+                <div id="questionButtons"></div>
+            </div>
+
+            <footer>
+                <div id="quitQuiz"><span class="closeIcon">
+                        <div class="iconInner"></div>
+                    </span>Quit quiz</div>
+
+                <button id="nextQuiz">Next</button>
+            </footer>
+        </template>
+
         <!-- Result popup -->
         <div id="quizResults" class="display-none">
             <h3>Quiz Results</h2>
@@ -178,9 +180,9 @@
                 <div class="score">
                     <h3>Your score</h3>
                     <div class="scoreResults">
-                        <p id="amountCorrect">20</p>
+                        <p id="amountCorrect">10</p>
                         <p>/</p>
-                        <p id="totalQuestions">20</p>
+                        <p id="totalQuestions">10</p>
                     </div>
                 </div>
 
@@ -190,31 +192,10 @@
                 </div>
 
                 <button id="backToHome"></button>
-
-                <template id="quizQuestions">
-                    <header>
-                        <p id="subTitle"></p>
-                        <h2>Question <span id="questionsDone">06</span><span id="questionsLeft">/10</span></h2>
-                        <div class="lines"></div>
-                    </header>
-
-                    <div id="innerQuiz">
-                        <p id="question">What scientific family does the Aardwolf belong to?</p>
-
-                        <div id="questionButtons"></div>
-                    </div>
-
-                    <footer>
-                        <div id="quitQuiz"><span class="closeIcon">
-                                <div class="iconInner"></div>
-                            </span>Quit quiz</div>
-
-                        <button id="nextQuiz">Next</button>
-                    </footer>
-                </template>
-
-
         </div>
+
+
+
 
         <!-- Result anwsers popup -->
         <div id="quizResultAnwsers" class="display-none">
@@ -224,10 +205,10 @@
 
                 <template id="quizResultAnwsersTemplate">
                     <div id="quizQuestionAnwserRow">
-                        <h2 id="resultDescriptionRow">1. Unlike on most salamanders, this part of a newt is flat?</h2>
-                        <p id="resultYourAnswerRow">Your Answer:</p>
-                        <p id="resultCorrectAnswerRow">Correct Answer:</p>
-                        <p id="resultScoreRow">Score:</p>
+                        <h2 id="resultDescriptionRow"></h2>
+                        <p id="resultYourAnswerRow"></p>
+                        <p id="resultCorrectAnswerRow"></p>
+                        <p id="resultScoreRow"></p>
                     </div>
                 </template>
 

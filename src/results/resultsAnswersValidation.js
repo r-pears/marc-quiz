@@ -20,7 +20,7 @@ export default function resultsAnswersValidation(currentQuestion) {
     correctAnswers.forEach((correctAnswer, index) => {
         const userAnswer = allUserAnswers[index];
         if (userAnswer === correctAnswer) {
-            totalPoints += 2;
+            totalPoints += 1;
         }
     });
     
