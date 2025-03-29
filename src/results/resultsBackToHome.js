@@ -1,27 +1,27 @@
 export default function resultsBackToHome() {
-    const resultPopopSelector = document.querySelector("#quizResults");
-    const takeNewQuizSelector = document.querySelector("#takeNewQuiz");
-    const quizPopupSelector = document.querySelector("#quizPopup");
-    const backToHomeButtonSelector = document.querySelector("#backToHome");
-    const removeQuizWrapper = document.querySelector(".quiz-wrapper");
+  const resultPopup = document.querySelector("#quizResults");
+  const takeNewQuizButton = document.querySelector("#takeNewQuiz");
+  const quizPopup = document.querySelector("#quizPopup");
+  const backToHomeButton = document.querySelector("#backToHome");
+  const quizWrapper = document.querySelector(".quiz-wrapper");
 
-    takeNewQuizSelector.addEventListener("click", () => {
-        resultPopopSelector.classList.add("display-none");
-        quizPopupSelector.classList.add("display-none");
-        quizPopupSelector.innerHTML = "";
+  // Helper function to reset quiz state
+  const resetQuizState = () => {
+    if (resultPopup) resultPopup.classList.add("display-none");
+    if (quizPopup) {
+      quizPopup.classList.add("display-none");
+      quizPopup.innerText = "";
+    }
+    if (quizWrapper) quizWrapper.classList.remove("display-none");
+    localStorage.clear();
+  };
 
-        removeQuizWrapper.classList.remove("display-none");
-        localStorage.clear();
-    });
+  // Attach event listeners if elements exist
+  if (takeNewQuizButton) {
+    takeNewQuizButton.addEventListener("click", resetQuizState);
+  }
 
-    backToHomeButtonSelector.addEventListener("click", () => {
-        resultPopopSelector.classList.add("display-none");
-        quizPopupSelector.classList.add("display-none");
-        removeQuizWrapper.classList.remove("display-none");
-
-        quizPopupSelector.innerHTML = "";
-
-        localStorage.clear();
-    });
+  if (backToHomeButton) {
+    backToHomeButton.addEventListener("click", resetQuizState);
+  }
 }
-

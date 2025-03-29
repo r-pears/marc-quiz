@@ -1,16 +1,15 @@
 export default function quizQuitButton() {
+  const quitButtonSelector = document.querySelector("#quitQuiz");
 
-    const quitButtonSelector = document.querySelector("#quitQuiz");
+  quitButtonSelector.addEventListener("click", () => {
+    const quizSelector = document.querySelector("#quizPopup");
+    quizSelector.classList.add("display-none");
+    // innerText is better for security reasons
+    quizSelector.innerText = "";
 
-    quitButtonSelector.addEventListener("click", () => {
+    const removeQuizWrapper = document.querySelector(".quiz-wrapper");
+    removeQuizWrapper.classList.remove("display-none");
 
-        const quizSelector = document.querySelector("#quizPopup");
-        quizSelector.classList.add("display-none");
-        quizSelector.innerHTML = "";
-
-        const removeQuizWrapper = document.querySelector(".quiz-wrapper");
-        removeQuizWrapper.classList.remove("display-none");
-
-        localStorage.clear();
-    });
+    localStorage.clear();
+  });
 }
